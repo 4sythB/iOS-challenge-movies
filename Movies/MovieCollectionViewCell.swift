@@ -17,5 +17,10 @@ class MovieCollectionViewCell: UICollectionViewCell {
     func updateWithMovie(movie: Movie) {
         titleLabel.text = movie.title
         ratingLabel.text = "Rating: \(movie.rating)"
+        
+        ImageController.imageForURL(movie.poster) { (image) in
+            guard let image = image else { return }
+            self.posterImageView.image = image
+        }
     }
 }

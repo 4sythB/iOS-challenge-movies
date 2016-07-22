@@ -8,13 +8,15 @@
 
 import UIKit
 
-class MovieSearchViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
+class MovieSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
     var movies: [Movie] = []
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -22,7 +24,7 @@ class MovieSearchViewController: UIViewController, UICollectionViewDataSource, U
         MovieController.searchMovies(searchTerm) { (movies) in
             guard let movies = movies else { return }
             self.movies = movies
-            self.reloadInputViews()
+            self.collectionView.reloadData()
         }
     }
     
