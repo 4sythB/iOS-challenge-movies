@@ -11,29 +11,26 @@ import Foundation
 class Movie {
     
     private let kTitle = "title"
-    private let kPopularity = "popularity"
+    private let kRating = "vote_average"
     private let kOverview = "overview"
     private let kPoster = "poster_path"
     
     var title: String
-    var popularity: String
+    var rating: Double
     var overview: String
     var poster: String
     
     init?(dictionary: [String:AnyObject]) {
-        guard let title = dictionary[kTitle] as? String, popularity = dictionary[kPopularity] as? String, overview = dictionary[kOverview] as? String, poster = dictionary[kPoster] as? String else { return nil }
+        guard let title = dictionary[kTitle] as? String,
+            rating = dictionary[kRating] as? Double,
+            overview = dictionary[kOverview] as? String,
+            poster = dictionary[kPoster] as? String else { return nil }
+        
+        guard let imageURL = NSURL(string: "http://image.tmdb.org/t/p/w500")?.URLByAppendingPathComponent(poster) else { return nil }
         
         self.title = title
-        self.popularity = popularity
+        self.rating = rating
         self.overview = overview
-        
-        let imageBaseURL = NSURL(string: "http://image.tmdb.org/t/p/w500")
-        let imageURL = imageBaseURL?.URLByAppendingPathComponent(poster)
-        
         self.poster = String(imageURL)
-        
-        ImageController.imageForURL(self.poster) { (image) in
-            // TODO: - figure out image url
-        }
     }
 }

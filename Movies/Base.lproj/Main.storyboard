@@ -5,46 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
-        <scene sceneID="2Qp-gA-r7T">
-            <objects>
-                <collectionViewController id="byY-ms-vPd" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="o1t-C2-K4L">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XGF-Mm-RTG">
-                            <size key="itemSize" width="170" height="170"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DVl-Pd-5Pp">
-                                <rect key="frame" x="0.0" y="64" width="170" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nb-vY-rqj">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="byY-ms-vPd" id="Kix-mR-FNw"/>
-                            <outlet property="delegate" destination="byY-ms-vPd" id="bRm-go-mYK"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Movies" id="sZc-ge-xbP"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="56G-EE-W8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1118" y="375"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pFn-Mo-aYm">
             <objects>
@@ -56,12 +16,41 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="byY-ms-vPd" kind="relationship" relationship="rootViewController" id="ZfQ-lB-PT2"/>
+                        <segue destination="H52-1o-H88" kind="relationship" relationship="rootViewController" id="vaa-OK-m6s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jah-h9-oUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="432" y="375"/>
+        </scene>
+        <!--Movie Search Table View Controller-->
+        <scene sceneID="SsW-Ut-PLd">
+            <objects>
+                <tableViewController id="H52-1o-H88" customClass="MovieSearchTableViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oex-kg-heP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" id="ov8-Nb-Gxn">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ov8-Nb-Gxn" id="8cQ-CI-2ko">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H52-1o-H88" id="jqx-Xh-Bfa"/>
+                            <outlet property="delegate" destination="H52-1o-H88" id="And-hk-Ohf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vzn-ff-b1c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSF-eQ-tDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="375"/>
         </scene>
     </scenes>
 </document>
