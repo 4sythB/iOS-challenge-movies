@@ -18,6 +18,7 @@
 		A210E7F01D426D20008BDE3A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210E7EF1D426D20008BDE3A /* NetworkController.swift */; };
 		A210E7F21D426D2B008BDE3A /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210E7F11D426D2B008BDE3A /* ImageController.swift */; };
 		A210E7FA1D42789C008BDE3A /* MovieSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210E7F91D42789C008BDE3A /* MovieSearchTableViewController.swift */; };
+		A210E7FC1D42835C008BDE3A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210E7FB1D42835C008BDE3A /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A210E7EF1D426D20008BDE3A /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		A210E7F11D426D2B008BDE3A /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		A210E7F91D42789C008BDE3A /* MovieSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewController.swift; sourceTree = "<group>"; };
+		A210E7FB1D42835C008BDE3A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				A210E7F91D42789C008BDE3A /* MovieSearchTableViewController.swift */,
+				A210E7FB1D42835C008BDE3A /* MovieTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				A210E7FA1D42789C008BDE3A /* MovieSearchTableViewController.swift in Sources */,
 				A210E7F21D426D2B008BDE3A /* ImageController.swift in Sources */,
+				A210E7FC1D42835C008BDE3A /* MovieTableViewCell.swift in Sources */,
 				A210E7F01D426D20008BDE3A /* NetworkController.swift in Sources */,
 				A210E7EE1D426D16008BDE3A /* MovieController.swift in Sources */,
 				A210E7EC1D426D0A008BDE3A /* Movie.swift in Sources */,
